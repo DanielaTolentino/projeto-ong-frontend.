@@ -1,0 +1,29 @@
+/* ==========================================================
+   ENTREGA I: ESTRUTURA BASE (HTML)
+   
+   Este arquivo CSS não continha estilos visuais, pois o foco era
+   na semântica do HTML5. Contém apenas um reset básico.
+   ========================================================== */
+
+/* Reset Básico para Consistência entre Navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Base simples para garantir que o texto seja legível (opcional) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: white;
+    color: black;
+}
+
+/* Tags semânticas que seriam estilizadas na ENTREGA II */
+header, main, footer, section, article {
+    /* Apenas para garantir que os blocos existam e usem largura total */
+    width: 100%;
+    display: block; 
+    margin-bottom: 20px;
+}
