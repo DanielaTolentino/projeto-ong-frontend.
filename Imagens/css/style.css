@@ -1,29 +1,124 @@
 /* ==========================================================
-   ENTREGA I: ESTRUTURA BASE (HTML)
-   
-   Este arquivo CSS não continha estilos visuais, pois o foco era
-   na semântica do HTML5. Contém apenas um reset básico.
+   ENTREGA II: ESTILIZAÇÃO E LEIAUTES (Design System e Layout)
    ========================================================== */
 
-/* Reset Básico para Consistência entre Navegadores */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+/* --------------------------------------
+   MÓDULO 1: _variables.css (DESIGN SYSTEM COMPLETO)
+   -------------------------------------- */
+:root {
+    /* 1.1 Paleta de Cores (Mínimo 8) */
+    --cor-principal: #FF5722;       /* Laranja Fogo (Vibrante CTA) */
+    --cor-secundaria: #4CAF50;     /* Verde Cítrico (Acento/Sucesso) */
+    --cor-terciaria: #795548;      /* Marrom Suave (Rodapé) */
+    --cor-neutra-escura: #212121;  /* Texto Principal */
+    --cor-neutra-clara: #FAFAFA;   /* Fundo Geral (Off-White) */
+    --cor-neutra-fundo: #ffffff;   /* Fundo de cards/header */
+    --cor-erro: #e53935;           
+    --cor-sucesso: var(--cor-secundaria); 
+    --cor-hover-suave: rgba(255, 87, 34, 0.1);
+
+    /* 1.2 Tipografia (5 Tamanhos) */
+    --fonte-familia: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-h1: 3.5em;
+    --font-size-h2: 2.2em;
+    --font-size-h3: 1.6em;
+    --font-size-body: 1em;
+    --font-size-small: 0.85em;
+
+    /* 1.3 Espaçamento Modular (Múltiplos de 8) */
+    --space-0: 0; --space-8: 8px; --space-16: 16px; --space-24: 24px;
+    --space-32: 32px; --space-48: 48px; --space-64: 64px; 
+
+    /* 1.4 Sombras e Bordas */
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --radius-padrao: 8px;
 }
 
-/* Base simples para garantir que o texto seja legível (opcional) */
+/* --------------------------------------
+   MÓDULO 2: _reset.css
+   -------------------------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    background-color: white;
-    color: black;
+    font-family: var(--fonte-familia);
+    color: var(--cor-neutra-escura);
+    background-color: var(--cor-neutra-clara);
+    line-height: 1.6;
+    min-height: 100vh; 
+    /* LAYOUT PRINCIPAL: CSS GRID */
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main (cresce), Footer */
+}
+a { color: var(--cor-principal); transition: all 0.2s ease-in-out; text-decoration: none; }
+header, main, footer, section { width: 100%; }
+
+
+/* --------------------------------------
+   MÓDULO 3: _layout.css (GRID e FLEXBOX)
+   -------------------------------------- */
+
+/* Container Central */
+main { max-width: 1200px; margin: 0 auto; padding: var(--space-0) var(--space-24); }
+
+/* Sistema de GRID de 12 Colunas (Para listagem de cards) */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: var(--space-24);
+    margin-top: var(--space-48);
 }
 
-/* Tags semânticas que seriam estilizadas na ENTREGA II */
-header, main, footer, section, article {
-    /* Apenas para garantir que os blocos existam e usem largura total */
-    width: 100%;
-    display: block; 
-    margin-bottom: 20px;
+/* Flexbox para alinhamento interno e Cards de Projeto */
+article {
+    /* Ocupa 4 colunas em desktop (12 colunas / 3 cards = 4) */
+    grid-column: span 4; 
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-24);
+    background-color: var(--cor-neutra-fundo);
+    border-radius: var(--radius-padrao);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s;
+}
+
+/* --------------------------------------
+   MÓDULO 4: _navigation.css (Estilo do Header e Links)
+   -------------------------------------- */
+header {
+    background-color: var(--cor-neutra-fundo);
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-16) var(--space-48);
+}
+
+.logo img { 
+    width: var(--space-48); 
+    height: var(--space-48); 
+    border-radius: 50%; 
+    border: 1px solid var(--cor-secundaria);
+}
+
+nav ul { list-style: none; display: flex; align-items: center; }
+
+/* --------------------------------------
+   MÓDULO 6: _breakpoints.css (Responsividade Base)
+   -------------------------------------- */
+@media (min-width: 600px) {
+    .grid-12 { grid-template-columns: repeat(2, 1fr); }
+    article { grid-column: span 6; }
+}
+@media (min-width: 992px) {
+    .grid-12 { grid-template-columns: repeat(12, 1fr); }
+    article { grid-column: span 4; }
+}
+
+/* --------------------------------------
+   MÓDULO 7: _footer.css
+   -------------------------------------- */
+footer {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-neutra-clara);
+    padding: var(--space-24) 0;
+    text-align: center;
 }
