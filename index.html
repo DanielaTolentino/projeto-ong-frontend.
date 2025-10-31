@@ -1,50 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ONG AuAu Ajuda - Resgate, tratamento e adoção de animais domésticos.">
-    <title>AuAu Ajuda | Início</title>
+    <title>AuAu Ajuda | Plataforma SPA</title>
+    <meta name="description" content="ONG AuAu Ajuda - Aplicação Single Page Application para resgate e adoção.">
+    
     <link rel="stylesheet" href="Imagens/css/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="Imagens/logo.png" alt="Logo da AuAu Ajuda" width="48" height="48">
+            <img src="Imagens/logos.png" alt="Logo da AuAu Ajuda - 🐾" width="150" height="150">
             <h1>AuAu Ajuda</h1>
         </div>
         <nav aria-label="Navegação Principal">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Seja Voluntário!</a></li>
-                <li><a href="projetos.html#doacao">Doação</a></li>
+                <li><a href="index.html" class="nav-link" data-path="index">Início</a></li> 
+                <li><a href="projetos.html" class="nav-link" data-path="projetos">Nossos Projetos</a></li>
+                <li><a href="cadastro.html" class="nav-link" data-path="cadastro">Seja Voluntário!</a></li>
+                <li><a href="projetos.html#doar" class="cta-button nav-link" data-path="projetos" data-hash="doar">Doação</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <h1>Um Lar, Uma Segunda Chance: Sua Ajuda Transforma!</h1>
+    <main id="app-content">
+        
+        <section id="hero" aria-labelledby="missao-titulo">
             <figure>
-                <img src="Imagens/hero.png" alt="Voluntário abraçando um cão" width="500">
-                <figcaption>Comprometimento e Carinho em Cada Resgate.</figcaption>
+                <img src="Imagens/hero.png" alt="🐾🐾" width="40%" height="auto">
+                <figcaption>Cada abraço transforma uma vida. Ajude-nos a resgatar!</figcaption>
             </figure>
-            <p>A AuAu Ajuda é uma organização dedicada à proteção animal. Junte-se a nós!</p>
-            <a href="projetos.html">Conheça Nossos Animais para Adoção</a>
+            <h2 id="missao-titulo">Nossa Missão: Resgatar, Tratar e Acolher</h2>
+            <p>A AuAu Ajuda é uma organização sem fins lucrativos dedicada a oferecer uma segunda chance a cães e gatos abandonados ou vítimas de maus-tratos.</p>
+            <a href="projetos.html" class="cta-button nav-link" data-path="projetos">Conheça Nossos Animais para Adoção</a>
         </section>
 
-        <section id="contato">
-            <h2>Entre em Contato</h2>
-            <address>
-                <p>Email: contato@auauajuda.org</p>
-                <p>Telefone: (11) 98765-4321</p>
-            </address>
+        <section id="sobre" aria-labelledby="sobre-titulo">
+            <h2 id="sobre-titulo">Conheça a AuAu Ajuda</h2>
+            <article>
+                <h3>Visão e Valores</h3>
+                <p>Nossa visão é um mundo sem animais abandonados. Nossos valores são: Ética, Transparência, Compaixão e Dedicação.</p>
+            </article>
+            <article>
+                <h3>Impacto em Números</h3>
+                <p>Desde 2018, já realizamos mais de 500 resgates, 450 adoções e 900 castrações. Sua ajuda faz a diferença.</p>
+            </article>
         </section>
+
+        <section id="contato" aria-labelledby="contato-titulo">
+            <h2 id="contato-titulo">Entre em Contato</h2>
+            <p>Email: contato@auauajuda.org</p>
+            <p>Telefone: (11) 98765-4321</p>
+            <p>Endereço: Rua dos Amigos, 123 - Cidade Feliz, SP</p>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 AuAu Ajuda.</p>
+        <small>&copy; 2024 AuAu Ajuda. Plataforma Interativa.</small>
     </footer>
+
+    <script type="module" src="Imagens/js/spa.js"></script>
+    <script type="module" src="Imagens/js/validation.js"></script>
+    <script type="module" src="Imagens/js/main.js"></script>
 </body>
 </html>
