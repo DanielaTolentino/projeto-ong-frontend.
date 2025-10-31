@@ -1,50 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos | AuAu Ajuda</title>
+    <title>Nossos Projetos - AuAu Ajuda</title>
+    <meta name="description" content="Conheça os projetos sociais, oportunidades de voluntariado e como doar para a AuAu Ajuda.">
+    <link rel="stylesheet" href="Imagens/css/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <div class="logo">
+            <img src="Imagens/logos.png" alt="Logo da AuAu Ajuda" width="48" height="48">
+            <h1>AuAu Ajuda</h1>
+        </div>
+        <nav aria-label="Navegação de Projetos">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Seja Voluntário!</a></li>
+                <li><a href="index.html" class="nav-link" data-path="index">Início</a></li>
+                <li><a href="projetos.html" class="nav-link" data-path="projetos">Nossos Projetos</a></li>
+                <li><a href="cadastro.html" class="nav-link" data-path="cadastro">Seja Voluntário!</a></li>
+                <li><a href="#doacao-info">Doação</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Projetos de Amor e Proteção Animal</h1>
+        <h1 id="titulo-projetos">Projetos de Amor e Proteção Animal</h1>
 
-        <section id="projetos-ativos">
+        <section id="projetos-ativos" class="grid-12" aria-labelledby="titulo-projetos">
             <h2>Nossos Programas Atuais</h2>
             
-            <article>
+            <article class="projeto-card" id="template-projeto-1">
                 <h3>Programa de Resgate Emergencial</h3>
-                <p>Garante o atendimento veterinário e abrigo imediato para animais em risco.</p>
+                <p>Garante o atendimento veterinário e abrigo imediato para animais em risco. Seu apoio é vital nas primeiras 48h.</p>
+                <figure>
+                    <img src="Imagens/resgates.png" alt="Voluntários resgatando um filhote" width="300" height="200">
+                    <figcaption>Cuidado e urgência no resgate.</figcaption>
+                </figure>
             </article>
-            
-            <article>
+
+            <article class="projeto-card" id="template-projeto-2">
                 <h3>Campanhas de Castração</h3>
-                <p>Realizamos mutirões mensais para controle populacional.</p>
+                <p>Realizamos mutirões mensais para controlar a natalidade e prevenir o abandono. Mais de 900 animais já foram castrados.</p>
+                <figure>
+                    <img src="Imagens/feira.png" alt="Cães e gatos juntos em ambiente seguro" width="300" height="200">
+                    <figcaption>Castração é o melhor caminho para a prevenção.</figcaption>
+                </figure>
             </article>
-        </section>
-        
-        <section id="voluntariado">
-            <h2>Voluntariado</h2>
-            <p>Descubra oportunidades e como participar.</p>
+
+            <article class="projeto-card">
+                <h3>Feiras de Adoção Responsável</h3>
+                <p>Conectamos animais resgatados a lares amorosos, garantindo que o processo de adoção seja seguro e consciente.</p>
+                <figure>
+                    <img src="Imagens/adote.png" alt="Pessoa abraçando um cão na feira de adoção" width="300" height="200">
+                    <figcaption>Ache o seu melhor amigo!</figcaption>
+                </figure>
+            </article>
         </section>
 
-        <section id="doacao">
-            <h2>Como Doar</h2>
-            <p>Todo apoio é bem-vindo para cirurgias e ração.</p>
+        <section id="voluntariado" aria-labelledby="voluntariado-titulo">
+            <h2 id="voluntariado-titulo">Seja um Voluntário!</h2>
+            <p>Temos diversas áreas: transporte, feiras de adoção, administração, lar temporário e mais. Seu tempo é o maior presente.</p>
+            <a href="cadastro.html" class="cta-button nav-link" data-path="cadastro">Quero Ser Voluntário</a>
+        </section>
+
+        <section id="doacao-info" aria-labelledby="doacao-titulo">
+            <h2 id="doacao-titulo">Como Doar e Transformar Vidas</h2>
+            <p>Toda doação, de qualquer valor, é utilizada diretamente para ração, medicamentos e cirurgias.</p>
+            <details>
+                <summary>Doação Recorrente (Mensal)</summary>
+                <p>Assine e ajude-nos a ter previsibilidade nos custos!</p>
+            </details>
+            <details>
+                <summary>Doação Única (Boleto/PIX)</summary>
+                <p>Doe agora e receba um relatório do impacto da sua contribuição.</p>
+            </details>
         </section>
     </main>
+
     <footer>
-        <p>Mais detalhes.</p>
+        <p>&copy; 2024 AuAu Ajuda. Seu apoio alimenta nosso trabalho.</p>
     </footer>
+
 </body>
 </html>
