@@ -1,25 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuAu Ajuda | Plataforma SPA</title>
-    <meta name="description" content="ONG AuAu Ajuda - Aplicação Single Page Application para resgate e adoção.">
+    <title>AuAu Ajuda | Plataforma Profissional de Resgate</title>
     
-    <link rel="stylesheet" href="Imagens/css/style.css">
+    <meta name="description" content="Plataforma Profissional da ONG AuAu Ajuda. Resgate, Tratamento e Adoção de animais domésticos. WCAG 2.1 AA Compliant.">
+    
+    <link rel="stylesheet" href="Imagens/css/style.min.css">
 </head>
 <body>
+    
     <header>
         <div class="logo">
-            <img src="Imagens/logos.png" alt="Logo da AuAu Ajuda - 🐾" width="150" height="150">
+            <img src="Imagens/logos.min.png" alt="Logo da AuAu Ajuda - Patinha e Cão">
             <h1>AuAu Ajuda</h1>
         </div>
         <nav aria-label="Navegação Principal">
             <ul>
                 <li><a href="index.html" class="nav-link" data-path="index">Início</a></li> 
-                <li><a href="projetos.html" class="nav-link" data-path="projetos">Nossos Projetos</a></li>
-                <li><a href="cadastro.html" class="nav-link" data-path="cadastro">Seja Voluntário!</a></li>
+                <li><a href="projetos.html" class="nav-link" data-path="projetos">Projetos</a></li>
+                <li><a href="cadastro.html" class="nav-link" data-path="cadastro">Voluntário</a></li>
                 <li><a href="projetos.html#doar" class="cta-button nav-link" data-path="projetos" data-hash="doar">Doação</a></li>
             </ul>
         </nav>
@@ -28,42 +29,57 @@
     <main id="app-content">
         
         <section id="hero" aria-labelledby="missao-titulo">
+            <h1 id="missao-titulo">Um Lar, Uma Segunda Chance: Sua Ajuda Transforma!</h1>
+            
             <figure>
-                <img src="Imagens/hero.png" alt="🐾🐾" width="40%" height="auto">
-                <figcaption>Cada abraço transforma uma vida. Ajude-nos a resgatar!</figcaption>
+                <img src="Imagens/hero.min.png" alt="Voluntário abraçando um cão resgatado e sorrindo." width="100%" height="auto">
+                <figcaption>Comprometimento e Carinho em Cada Resgate.</figcaption>
             </figure>
-            <h2 id="missao-titulo">Nossa Missão: Resgatar, Tratar e Acolher</h2>
-            <p>A AuAu Ajuda é uma organização sem fins lucrativos dedicada a oferecer uma segunda chance a cães e gatos abandonados ou vítimas de maus-tratos.</p>
-            <a href="projetos.html" class="cta-button nav-link" data-path="projetos">Conheça Nossos Animais para Adoção</a>
+            
+            <p class="hero-subtext">A AuAu Ajuda é a sua ponte para a proteção animal. Junte-se a nós para resgatar, tratar e acolher cães e gatos em situação de vulnerabilidade.</p>
+            
+            <a href="cadastro.html" class="cta-button principal nav-link" data-path="cadastro">Quero Fazer Parte!</a>
         </section>
 
-        <section id="sobre" aria-labelledby="sobre-titulo">
-            <h2 id="sobre-titulo">Conheça a AuAu Ajuda</h2>
-            <article>
-                <h3>Visão e Valores</h3>
-                <p>Nossa visão é um mundo sem animais abandonados. Nossos valores são: Ética, Transparência, Compaixão e Dedicação.</p>
-            </article>
-            <article>
-                <h3>Impacto em Números</h3>
-                <p>Desde 2018, já realizamos mais de 500 resgates, 450 adoções e 900 castrações. Sua ajuda faz a diferença.</p>
-            </article>
+        
+        <section id="sobre" aria-labelledby="diferenciais-titulo">
+            <h2 id="diferenciais-titulo">Por Que Ajudar a AuAu Ajuda?</h2>
+            
+            <div class="grid-12">
+                
+                <article class="col-4">
+                    <h3>🩺 Saúde Prioritária</h3>
+                    <p>Todo animal resgatado recebe tratamento veterinário completo, incluindo vacinação e castração antes da adoção.</p>
+                </article>
+                
+                <article class="col-4">
+                    <h3>🤝 Transparência Total</h3>
+                    <p>Divulgamos relatórios anuais de prestação de contas. Você sabe exatamente onde cada centavo da sua doação é investido.</p>
+                </article>
+
+                <article class="col-4">
+                    <h3>🏠 Adoção Responsável</h3>
+                    <p>Realizamos entrevistas rigorosas e acompanhamento pós-adoção para garantir o final feliz e duradouro.</p>
+                </article>
+
+            </div>
         </section>
 
-        <section id="contato" aria-labelledby="contato-titulo">
-            <h2 id="contato-titulo">Entre em Contato</h2>
-            <p>Email: contato@auauajuda.org</p>
-            <p>Telefone: (11) 98765-4321</p>
-            <p>Endereço: Rua dos Amigos, 123 - Cidade Feliz, SP</p>
+        <section id="cta-voluntario" aria-labelledby="cta-titulo">
+            <h2 id="cta-titulo">Seja um Voluntário: Seu Tempo é Precioso</h2>
+            <p>Não é preciso dinheiro para transformar. Seja um lar temporário, ajude no transporte ou nas feiras de adoção. Sua presença é o maior presente!</p>
+            <a href="cadastro.html" class="cta-button secundario nav-link" data-path="cadastro">Cadastre-se Já</a>
         </section>
-
+        
     </main>
 
     <footer>
-        <small>&copy; 2024 AuAu Ajuda. Plataforma Interativa.</small>
+        <p>Email: contato@auauajuda.org | Telefone: (11) 98765-4321</p>
+        <small>&copy; 2024 AuAu Ajuda. Todos os direitos reservados. WCAG 2.1 AA Compliant.</small>
     </footer>
 
-    <script type="module" src="Imagens/js/spa.js"></script>
-    <script type="module" src="Imagens/js/validation.js"></script>
-    <script type="module" src="Imagens/js/main.js"></script>
+    <script type="module" src="Imagens/js/spa.min.js"></script>
+    <script type="module" src="Imagens/js/validation.min.js"></script>
+    <script type="module" src="Imagens/js/main.min.js"></script>
 </body>
 </html>
